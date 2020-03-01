@@ -1,13 +1,14 @@
 import React from 'react';
+// import { removeFeature } from '../actions/featureActions';
 
-const AdditionalFeature = props => {
+const AddedFeature = props => {
   return (
     <li>
-      {/* Add an onClick that will let you add a feature to your car */}
-      <button className="button">Add</button>
-      {props.feature.name} (+{props.feature.price})
+      {/* Add an onClick to run a function to remove a feature */}
+      <button onClick={() => props.removeFeature(props.feature)} className="button">X</button>
+      {props.feature.name}
     </li>
   );
 };
 
-export default AdditionalFeature;
+export default AddedFeature;
